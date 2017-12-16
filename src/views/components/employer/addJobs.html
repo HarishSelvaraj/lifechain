@@ -1,7 +1,86 @@
 <div class="animated fadeIn">
   <div class="row">
     <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>Add New Job Opening</strong>
+        </div>
+        <div class="card-body">
+          <form action="" method="post" enctype="multipart/form-data" class="form-horizontal ">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Project Name</label>
+                <div class="col-md-9">
+                  <input type="text" name="project-name" class="form-control" placeholder="Project Name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Duration of contract</label>
+                <div class="col-md-6">
+                  <select id="select" name="duration" class="form-control" size="1">
+                    <option value="1">Days</option>
+                    <option value="2">Months</option>
+                    <option value="3">Years</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <input type="number" name="openings" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Nationality</label>
+                <div class="col-md-9">
+                  <select id="select" name="nationality" class="form-control" size="1">
+                    <option value="1">Any</option>
+                    <option value="2">Indian</option>
+                    <option value="3">US</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="file-input">Upload Employment Terms</label>
+                <div class="col-md-9">
+                  <input type="file" id="file-input" name="file-input">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input"># of Opening</label>
+                <div class="col-md-9">
+                  <input type="number" name="openings" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Skills Required</label>
+                <div class="col-md-9">
+                  <input type="text" name="skills" class="form-control" placeholder="Enter your Skills">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Experience</label>
+                <div class="col-md-4">
+                  <input type="number" name="experience" class="form-control">
+                </div>
+                <div class="col-md-5">
+                  <select id="select" name="duration-experience" class="form-control" size="1">
+                    <!--<option value="1">Days</option>-->
+                    <option value="1">Months</option>
+                    <option value="2">Years</option>
+                  </select>
+                </div>
+              </div>
 
+              
+            </div>
+
+          </form>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Cancel</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
