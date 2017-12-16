@@ -18,32 +18,31 @@ var brandPrimary = '#20a8d8';
         ])
         .controller('maincontrol', ['$scope', function ($scope) {
 //alert('in');
-        $scope.menus = {
-        'Employee': [
-        {
-        name: "",
-                uiSref: ""
-        }
-        ],
-                'Employer': [{
-                name: "Home",
-                        uiSref: "app.components.home"
-                }, {
-                name: "Projects",
-                        uiSref: "app.components.projects"
-                }, {
-                name: "Job Openings",
-                        uiSref: "app.components.jobs"
-                }, {
-                name: "Add Job",
-                        uiSref: "app.components.addJobs"
-                }],
-                'Regulatory': []
-        };
+       $scope.menus = {
+                  'Employee': [
+                    {
+                      name: "",
+                      uiSref: ""
+                    }
+                  ],
+                  'Employer': [{
+                    name: "Home",
+                    uiSref: "app.components.home"
+                  }, {
+                    name: "Projects",
+                    uiSref: "app.components.projects"
+                  }, {
+                    name: "Add Job",
+                    uiSref: "app.components.addJobs"
+                  }],
+                    'Regulatory': []
+                };
+                // {
+                //     name: "Job Openings",
+                //     uiSref: "app.components.jobs"
+                //   },
         }])
         .controller('employeecontrol', ['$scope', '$state', function ($scope, $state) {
-
-
         $scope.validatePassword = function (employee) {
         debugger;
                 var password = employee.password;
