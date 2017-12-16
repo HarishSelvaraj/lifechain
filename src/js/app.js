@@ -39,11 +39,8 @@ angular
                     }
                 };
 
-
-
                 $scope.aadharno = false;
                 $scope.employee = {};
-//                alert("Employee");
                 $scope.country = [{id: "1", name: "India"}, {id: "1", name: "America"}, {id: "1", name: "Russia"}, {id: "1", name: "London"}];
                 $scope.skills = [{id: "1", name: "Welder"}, {id: "1", name: "Fitter"}, {id: "1", name: "ITI"}, {id: "1", name: "DME"}];
 
@@ -54,7 +51,16 @@ angular
                         $scope.aadharno = false;
                     }
                     debugger;
-                }
+                };
+                $scope.save = function (data) {
+                    debugger;
+                };
+
+//                $scope.qr = function () {
+//                    debugger;
+//                    
+//                };
+
             }])
         .controller('employercontrol', ['$scope', function ($scope) {
 //alert('in');
