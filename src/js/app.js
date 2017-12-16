@@ -21,8 +21,25 @@ angular
         .controller('maincontrol', ['$scope', function ($scope) {
 //alert('in');
                 $scope.menus = {
-                    'Employee': ['Ananth', 'Solomon'],
-                    'Employer': [],
+                  'Employee': [
+                    {
+                      name: "",
+                      uiSref: ""
+                    }
+                  ],
+                  'Employer': [{
+                    name: "Home",
+                    uiSref: "app.components.home"
+                  }, {
+                    name: "Projects",
+                    uiSref: "app.components.projects"
+                  }, {
+                    name: "Job Openings",
+                    uiSref: "app.components.jobs"
+                  }, {
+                    name: "Add Job",
+                    uiSref: "app.components.addJobs"
+                  }],
                     'Regulatory': []
                 };
             }])

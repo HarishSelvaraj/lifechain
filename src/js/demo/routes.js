@@ -29,28 +29,35 @@ angular
     abstract: true,
     template: '<ui-view></ui-view>',
     ncyBreadcrumb: {
-      label: 'Components'
+      label: 'Employer'
     }
   })
-  .state('app.components.buttons', {
-    url: '/buttons',
-    templateUrl: 'views/components/buttons.html',
+    .state('app.components.home', {
+      url: '/home',
+    templateUrl: 'views/components/employer/home.html',
     ncyBreadcrumb: {
-      label: 'Buttons'
+      label: 'Home'
     }
   })
-  .state('app.components.social-buttons', {
-    url: '/social-buttons',
-    templateUrl: 'views/components/social-buttons.html',
+  .state('app.components.projects', {
+    url: '/projects',
+    templateUrl: 'views/components/employer/projects.html',
     ncyBreadcrumb: {
-      label: 'Social Buttons'
+      label: 'Projects'
     }
   })
-  .state('app.components.cards', {
-    url: '/cards',
-    templateUrl: 'views/components/cards.html',
+  .state('app.components.jobs', {
+    url: '/jobs',
+    templateUrl: 'views/components/employer/jobs.html',
     ncyBreadcrumb: {
-      label: 'Cards'
+      label: 'Jobs'
+    }
+  })
+  .state('app.components.addJobs', {
+    url: '/addJobs',
+    templateUrl: 'views/components/employer/addJobs.html',
+    ncyBreadcrumb: {
+      label: 'Add Jobs'
     }
   })
   .state('app.components.forms', {

@@ -1487,8 +1487,7 @@ pre {
     opacity: 1; }
 
 select.form-control:not([size]):not([multiple]) {
-  /*height: calc(2.0625rem + 2px);*/ 
-}
+  height: calc(2.0625rem + 2px); }
 
 select.form-control:focus::-ms-value {
   color: #3e515b;
@@ -9459,12 +9458,3 @@ hr.transparent {
       float: left; }
   *[dir="rtl"] .callout-default {
     border-right-color: #536c79; }
-
-  
-  .mandatory{
-      color:red;
-  }
-  
-  .danger{
-      border:1px solid red;
-  }
