@@ -1,0 +1,114 @@
+<div class="container" style="margin-top: 20px;" ng-controller="projectdetailCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="card ">
+                        <h4 class="card-header text-center">Company Details</h4>
+                        <div class="card-body">
+                            <div class="col-md-8" style="margin-top: 15px;">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object" src="../../../img/logo6.jpg"  alt="..." style="width: 90px;">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Road Construction Company</h4>
+                                        <span>  <label class="form-group">Tenure : <span style="font-weight:300;">3 Months</span></label></span><br>
+                                        <span>  <label class="form-group">Start Date: <span style="font-weight:300;">01/11/2017</span></label></span>
+                                        <span>  <label class="form-group">End Date: <span style="font-weight:300;">01/01/2018</span></label></span>
+                                        <button class="btn btn-success pull-right">Renew Availablity</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card ">
+                        <h4 class="card-header text-center">Attendance Informations</h4>
+                        <div class="card-body">
+                            <div class="card-text col-md-6">
+                                <p><label class="form-group">Expected AH: <span style="font-weight:300;">10 Days</span></label></p>
+                                <div class="form-group">
+                                    <!--<label for="gender"><span class="mandatory">*</span></label>-->
+                                    <select class="form-control" id="gender">
+                                        <option>This Week</option>
+                                        <option>Last Week</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-text col-md-6">
+                                <p><label class="form-group">Actual: <span style="font-weight:300;">5 Days</span></label></p>
+                                <div class="card-text col-md-3">
+                                    <p><label class="form-group">Start Date <span style="font-weight:300;">11/12/2017</span></label></p>
+                                </div>
+                                <div class="card-text col-md-3">
+                                    <p>  <label class="form-group">End Date <span style="font-weight:300;">17/12/2017</span></label></p>
+                                </div>
+                            </div>
+                            <div class="card-text col-md-12">
+                                <div class="col-md-2">Mon &nbsp; <input type="checkbox" style="" checked="checked"></div>
+                                <div class="col-md-2">Tue &nbsp; <input type="checkbox" style="" checked="checked"></div>
+                                <div class="col-md-2">Wed &nbsp; <input type="checkbox" style="" checked="checked"></div>
+                                <div class="col-md-2">Thu &nbsp; <input type="checkbox" style="" checked="checked"></div>
+                                <div class="col-md-2">Fri &nbsp; <input type="checkbox" style="" ></div>
+                                <div class="col-md-2">Sat &nbsp;<input type="checkbox" style="" checked=""></div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text pull-right">
+                                <button class="btn btn-success" ng-click="add_proj()"> Accept </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <h4 class="card-header text-center">Feedback</h4>
+                        <div class="card-body">
+                            <div class="card-text col-md-12">
+                                <p><label class="form-group">How are the facilities from Road Construction Company ?</label> &nbsp;&nbsp;&nbsp; Not at All &nbsp; <input type="radio" name="optradio"> 1 &nbsp; <input type="radio" name="optradio"> 2 &nbsp; <input type="radio" name="optradio"> 3 &nbsp; <input type="radio" name="optradio"> 4 &nbsp; <input type="radio" name="optradio">  5 &nbsp; Very Much &nbsp;</p>
+                                <p><label class="form-group">Any question about Road Construction Company ?</label> &nbsp;&nbsp;&nbsp; <input type="text" name="optradio"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <h4 class="card-header text-center">Other Projects Post Tenure Expire</h4>
+                        <div class="container-fluid">
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-md-6" style="margin-top: 15px;">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="../../../img/logo1.jpg"  alt="..." style="width: 90px;border-radius: 50%;"></a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Road Construction</h4>
+                                            <span>  <label class="form-group">Opening: <span style="font-weight:300;">300</span></label></span>
+                                            <span>  <label class="form-group">Pay: <span style="font-weight:300;">150 Per/day</span></label></span>
+                                            <p>The job duties of a general laborer vary</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="margin-top: 15px;">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="../../../img/logo2.jpg"  alt="..." style="width: 90px;border-radius: 50%;"> </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Transfer loads</h4>
+                                            <span>  <label class="form-group">Opening: <span style="font-weight:300;">80</span></label></span>
+                                            <span>  <label class="form-group">Pay: <span style="font-weight:300;">250 Per/day</span></label></span>
+                                            <p>The job duties of a general laborer vary</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
