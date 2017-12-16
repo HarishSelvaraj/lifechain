@@ -34,14 +34,15 @@ angular
                     name: "Projects",
                     uiSref: "app.components.projects"
                   }, {
-                    name: "Job Openings",
-                    uiSref: "app.components.jobs"
-                  }, {
                     name: "Add Job",
                     uiSref: "app.components.addJobs"
                   }],
                     'Regulatory': []
                 };
+                // {
+                //     name: "Job Openings",
+                //     uiSref: "app.components.jobs"
+                //   },
             }])
         .controller('employeecontrol', ['$scope', function ($scope) {
 
