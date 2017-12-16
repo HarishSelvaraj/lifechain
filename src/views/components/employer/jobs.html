@@ -1,5 +1,119 @@
-<div class="animated fadeIn">
-  <div class="row">
-    JOBS
+<div class="animated fadeIn" ng-controller="jobscontrol">
+  <div class="card-group mb-4 well-lg">
+    <div class="card border-primary">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="icon-people"></i>
+        </div>
+        <div class="h4 mb-0">Project ID</div>
+        <small class="text-muted text-uppercase font-weight-bold ">12123232</small>
+      </div>
+    </div>
+    <div class="card border-primary">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="icon-user-follow"></i>
+        </div>
+        <div class="h4 mb-0">385</div>
+        <small class="text-muted text-uppercase font-weight-bold">New Applicants</small>
+        <div class="progress progress-xs mt-3 mb-0">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border-primary">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="icon-pie-chart"></i>
+        </div>
+        <div class="h4 mb-0">28</div>
+        <small class="text-muted text-uppercase font-weight-bold">Open Positions</small>
+        <div class="progress progress-xs mt-3 mb-0">
+          <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-7 col-lg-7 col-sm-7">
+    <table class="table table-hover table-outline mb-0 hidden-sm-down">
+      <thead class="thead-light">
+        <tr>
+          <th class="text-center">
+            <i class="icon-people"></i>
+          </th>
+          <th class="text-center">Id</th>
+          <th class="text-center">Name</th>
+          <th class="text-center">Age</th>
+          <th class="text-center">Experience</th>
+          <th class="text-center">Nationality</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center">1</td>
+          <td class="text-center">120322322</td>
+          <td class="text-center">Raju</td>
+          <td class="text-center">50</td>
+          <td class="text-center">35</td>
+          <td class="text-center">Indian</td>
+
+        </tr>
+        <tr>
+          <td class="text-center">1</td>
+          <td class="text-center">120322322</td>
+          <td class="text-center">Raju</td>
+          <td class="text-center">50</td>
+          <td class="text-center">35</td>
+          <td class="text-center">Indian</td>
+
+        </tr>
+        <tr>
+          <td class="text-center">1</td>
+          <td class="text-center">120322322</td>
+          <td class="text-center">Raju</td>
+          <td class="text-center">50</td>
+          <td class="text-center">35</td>
+          <td class="text-center">Indian</td>
+
+        </tr>
+        <tr>
+          <td class="text-center">1</td>
+          <td class="text-center">120322322</td>
+          <td class="text-center">Raju</td>
+          <td class="text-center">50</td>
+          <td class="text-center">35</td>
+          <td class="text-center">Indian</td>
+
+        </tr>
+        <tr>
+          <td class="text-center">1</td>
+          <td class="text-center">120322322</td>
+          <td class="text-center">Raju</td>
+          <td class="text-center">50</td>
+          <td class="text-center">35</td>
+          <td class="text-center">Indian</td>
+
+        </tr>
+        <tr>
+          <td class="text-center">1</td>
+          <td class="text-center">120322322</td>
+          <td class="text-center">Raju</td>
+          <td class="text-center">50</td>
+          <td class="text-center">35</td>
+          <td class="text-center">Indian</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-sm-5 col-md-5 col-lg-5">
+    <div class="card-header">
+      <span style="font-weight:bold">Daily Wage - Mode</span>
+      <canvas class="chart chart-bar" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colors" ></canvas>
+      
+    </div>
   </div>
 </div>
