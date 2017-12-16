@@ -1,0 +1,130 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" ng-click="employee = true; employer = false;">Employee</a></li>
+                <li><a data-toggle="tab" ng-click="employee = false; employer = true;">Employer</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" ng-if="employee" ng-controller="employeecontrol">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" class="form-control" id="name" ng-model="employee.name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="surname">Surname:</label>
+                                        <input type="text" class="form-control" id="surname" ng-model="employee.surname">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email"><span class="mandatory">*</span>Email:</label>
+                                        <input type="email" class="form-control" id="email"  ng-model="employee.email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="age"><span class="mandatory">*</span>Age:</label>
+                                        <input type="number" class="form-control" id="age"  ng-model="employee.age">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password"><span class="mandatory">*</span>Password:</label>
+                                        <input type="password" class="form-control" id="password"  ng-model="employee.password" ng-change="validatePassword(employee)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="confirmpassword"><span class="mandatory">*</span>Confirm Password:</label>
+                                        <input type="password" class="form-control" id="confirmpassword"   ng-model="employee.confirmpassword" ng-keyup="validatePassword(employee)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="gender"><span class="mandatory">*</span>Gender:</label>
+                                        <select class="form-control" id="gender">
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="address"><span class="mandatory">*</span>Address:</label>
+                                        <input type="text" class="form-control" id="address"  ng-model="employee.address">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="country"><span class="mandatory">*</span>Country:</label>
+                                        <select class="form-control" id="country" ng-model="employee.country" ng-change="coun_change(employee.country)">
+                                            <option ng-repeat="count in country">{{count.name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="passport"><span class="mandatory">*</span>Passport Number:</label>
+                                        <input type="number" class="form-control" id="passport"  ng-model="employee.passport">
+                                    </div>
+                                </div>
+                                <div class="col-md-6" ng-if="aadharno">
+                                    <div class="form-group">
+                                        <label for="aadhaar"><span class="mandatory" >*</span>Aadhaar Id:</label>
+                                        <input type="number" class="form-control" id="aadhaar"  ng-model="employee.aadhaar">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="pincode"><span class="mandatory">*</span>Pincode:</label>
+                                        <input type="number" class="form-control" id="pincode"  ng-model="employee.pincode">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="pan"><span class="mandatory">*</span>PAN Number:</label>
+                                        <input type="text" class="form-control" id="pan"  ng-model="employee.pan">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="skills"><span class="mandatory">*</span>Skills:</label>
+                                        <input type="text" class="form-control" id="skills"  ng-model="employee.skills">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="file"><span class="mandatory">*</span>Upload Resume</label>
+                                        <input type="file" class="form-control" id="file"  ng-model="employee.uploads">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 pull-right">
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-warning">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane active" ng-if="employer" ng-controller="employercontrol">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            employer
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
