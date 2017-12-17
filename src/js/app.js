@@ -35,7 +35,10 @@ var brandPrimary = '#20a8d8';
                     name: "Add Job",
                     uiSref: "app.components.addJobs"
                   }],
-                    'Regulatory': []
+                    'Regulatory': [{
+                    name: "Access Manager",
+                    uiSref: "app.components.access"
+                  }]
                 };
                 // {
                 //     name: "Job Openings",
