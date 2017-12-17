@@ -20,6 +20,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
       <div class="col-lg-12">
         <div class="card">
@@ -37,15 +39,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>20120101</td>
-                  <td>Samppa Nori</td>
+                <tr ng-repeat="pl in projectList" ng-click="selectProject(pl)" ng-class="{selected:pl.id===selectedProject.id}">
+                  <td>{{pl.id}}</td>
+                  <td>{{pl.name}}</td>
                   <td>
-                    <span class="badge badge-success"></span>Member</span>
+                    <span class="badge badge-success"></span>{{pl.type}}</span>
                   </td>
                   <td>
                     <div style="width:80px">
-                      <span class="pull-right">20</span>
+                      <span class="pull-right">{{pl.count}}</span>
                     </div>
                   </td>
                 </tr>
@@ -76,6 +78,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="row" ng-if="selectedProject">
     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
       <div class="col-sm-12 col-md-12">
         <div class="card card-accent-primary">
@@ -85,20 +89,22 @@
           <div class="card-body">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="font-weight:bold">
               <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bold" style="font-weight:bold">Project ID</div>
-              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 h5 text-primary mb-1 mt-2">1221023</div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 h5 text-primary mb-1 mt-2">{{selectedProject.id}}</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-weight:bold">Project-Name</div>
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h5 text-primary mb-1 mt-2">REP RAP</div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h5 text-primary mb-1 mt-2">{{selectedProject.name}}</div>
             </div>
             <div class="col-sm-offset-6 col-md-offset-6 col-lg-offset-6 col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-weight:bold">Type</div>
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h5 text-danger mb-1 mt-2">Contractor</div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h5 text-danger mb-1 mt-2">{{selectedProject.type}}</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row well-sm">
     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
       <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4">
 
@@ -143,6 +149,13 @@
                   <td class="text-center">Indian</td>
                   <td class="text-center">Construction Worker</td>
                 </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td class="text-center">236751789</td>
+                  <td class="text-center">Ananth</td>
+                  <td class="text-center">US</td>
+                  <td class="text-center">Civil Worker</td>
+                </tr>
               </tbody>
             </table>
 
@@ -152,4 +165,92 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Grievances
+        </div>
+        <div class="card-body">
+          <div class="card-jobs">
+            <div class="card">
+              <div class="card-body">
+                <div class="text-muted text-uppercase font-weight-bold">Project_ID: JB12</div>
+                <p>#50 Grievances Reported</p>
+                <a class="h5 text-info mb-0 font-weight-bold float-right">view</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-jobs">
+            <div class="card">
+              <div class="card-body">
+
+                <div class="text-muted text-uppercase font-weight-bold">Project_ID: JB145</div>
+                <p>#20 Grievances Reported</p>
+                <a class="h5 text-info mb-0 font-weight-bold float-right">view</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-jobs">
+            <div class="card">
+              <div class="card-body">
+                <div class="text-muted text-uppercase font-weight-bold">Project_ID: JB14</div>
+                <p>#10 Grievances Reported</p>
+                <a class="h5 text-info mb-0 font-weight-bold float-right">view</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-jobs">
+            <div class="card">
+              <div class="card-body">
+                <div class="text-muted text-uppercase font-weight-bold">Project_ID: JB156</div>
+                <p>#120 Grievances Reported</p>
+                <a class="h5 text-info mb-0 font-weight-bold float-right">view</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-sm-12 col-md-12 col-sm-12 col-xs-12">
+      Know More ?
+    </div>
+    <div class="col-sm-12 col-md-12 col-sm-12">
+        <div class="col-sm-3 col-md-3 col-sm-3">
+      <div class="card">
+        <div class="card-body p-4 clearfix">
+          <i class=" bg-primary p-4 font-2xl mr-3 float-left font-weight-bold" style="border-radius:100%">30%</i>
+          <div class="text-muted text-uppercase font-weight-bold font-lg well-lg">of the resources in this project are unused</div>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-sm-3">
+      <div class="card">
+          <div class="card-body p-4 clearfix">
+            <i class=" bg-warning p-4 font-2xl mr-3 float-left font-weight-bold" style="border-radius:100%">{{liveprojects}}%</i>
+            <div class="text-muted text-uppercase font-weight-bold font-lg well-lg">of your employees not satisfied with the norms of your company</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-sm-3">
+        <div class="card">
+            <div class="card-body p-4 clearfix">
+              <i class=" bg-danger p-4 font-2xl mr-3 float-left font-weight-bold" style="border-radius:100%">{{liveprojects}}%</i>
+              <div class="text-muted text-uppercase font-weight-bold font-lg well-lg">of your employees raised complaints against your company</div>
+            </div>
+          </div>
+          </div>
+          <div class="col-sm-3 col-md-3 col-sm-3">
+          <div class="card">
+              <div class="card-body p-4 clearfix">
+                <i class=" bg-success p-4 font-2xl mr-3 float-left font-weight-bold" style="border-radius:100%">{{liveprojects}}%</i>
+                <div class="text-muted text-uppercase font-weight-bold font-lg well-lg">Live Projects</div>
+              </div>
+            </div>
+            </div>
+    </div>
+  </div>
+</div>
 </div>
