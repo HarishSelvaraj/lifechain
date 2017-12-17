@@ -16,27 +16,6 @@ angular
             'ncy-angular-breadcrumb',
             'angular-loading-bar'
         ])
-<<<<<<< HEAD
-        .controller('maincontrol', ['$rootScope','$scope', function ($rootScope,$scope) {
-//alert('in');
-       $scope.menus = {
-                  'Employee': [
-                    {
-                      name: "",
-                      uiSref: ""
-                    }
-                  ],
-                  'Employer': [{
-                    name: "Home",
-                    uiSref: "app.components.home"
-                  }, {
-                    name: "Projects",
-                    uiSref: "app.components.projects"
-                  }, {
-                    name: "Add Job",
-                    uiSref: "app.components.addJobs"
-                  }],
-=======
         .controller('maincontrol', ['$scope','$rootScope','$http','$state', function ($scope,$rootScope,$http,$state) {
                 debugger;
 $scope.user = {};
@@ -99,7 +78,6 @@ alert("Cant able to redirect");
                             name: "Add Job",
                             uiSref: "app.components.addJobs"
                         }],
->>>>>>> 876fbfebf8dc3ee81f8f074d1b49560e9de207fa
                     'Regulatory': [{
                     name: "Access Manager",
                     uiSref: "app.components.access"
