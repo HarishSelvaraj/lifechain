@@ -16,10 +16,43 @@ angular
             'ncy-angular-breadcrumb',
             'angular-loading-bar'
         ])
-        .controller('maincontrol', ['$scope', function ($scope) {
-                
-                $scope.login = sessionStorage.getItem('foo');
+        .controller('maincontrol', ['$scope','$rootScope','$http','$state', function ($scope,$rootScope,$http,$state) {
+                debugger;
+$scope.user = {};
+                $scope.reg = function (data_log) {
+                    debugger;
+                   
+                    $http({
+                        method: 'POST',
+                        url: 'http://10.91.17.123:4000/auth/login',
+                        data: data_log
+                    }).then(function successCallback(response) {
+                         $rootScope.role=response.data.ResponseObject.role ;
+                         $scope.role=response.data.ResponseObject.role ;
+//                         localStorage.login_details= response.data.ResponseObject;
+                         localStorage.setItem('todos', JSON.stringify(response.data.ResponseObject));
+                        console.log(response.data.ResponseObject);
+                        if (response.data.ResponseObject.role == "Employee") {
+                            $state.go("app.components.employee_home");
+                        } else if (response.data.ResponseObject.role == "Employer") {
+//app.components.home
+                            $state.go("app.components.home");
+                        } else if (response.data.ResponseObject.role == "admin") {
+$state.go("app.components.access");
+                        } else {
+alert("Cant able to redirect");
+                        }
+                       
+                    }, function errorCallback(response) {
+                        alert("Please Ensure the Credentials");
+                    });
+                };
+                $scope.regi = function (data_log) {
+                    debugger;
 
+                    $state.go("appSimple.register");
+
+                };
                 $scope.menus = {
                     'Employee': [{
                             name: "Home",
@@ -45,7 +78,7 @@ angular
                   }]
                 };
             }])
-        .controller('employeecontrol', ['$scope', '$state', '$http', function ($scope, $state, $http) {
+        .controller('employeecontrol', ['$scope', '$state','$rootScope', '$http', function ($scope, $state,$rootScope, $http) {
                 $scope.validatePassword = function (employee) {
                     debugger;
                     var password = employee.password;
@@ -70,7 +103,7 @@ angular
                 $scope.save = function (data_log) {
                     debugger;
                     data_log.role = "Employee";
-                    data_log.appstatus = true;
+                    data_log.appstatus = 1;
                     debugger;
                     $http({
                         method: 'POST',
@@ -85,47 +118,69 @@ angular
 //                    $state.go("app.components.labour");
                 };
             }])
-        .controller('logincontrol', ['$scope', '$state', '$http', function ($scope, $state, $http) {
-                $scope.user = {};
-                $scope.reg = function (data_log) {
+        .controller('logincontrol', ['$scope', '$state','$rootScope', '$http', function ($scope, $state,$rootScope, $http) {
+     
+            }])
+        .controller('employercontrol', ['$scope','$state', '$http', function ($scope,$state,$http) {
+                $scope.employer={};
+              $scope.save = function (data_log) {
+                    debugger;
+                    data_log.role = "Employer";
+                    data_log.appstatus = 2;
                     debugger;
                     $http({
                         method: 'POST',
-                        url: 'http://10.91.17.123:4000/auth/login',
+                        url: ' http://10.91.17.123:4000/auth/signup',
                         data: data_log
                     }).then(function successCallback(response) {
-                        if (response.role == "Employee") {
+                   if (response.data.ResponseObject.role == "Employee") {
                             $state.go("app.components.employee_home");
-                        } else if (response.role == "Employer") {
+                        } else if (response.data.ResponseObject.role == "Employer") {
 //app.components.home
                             $state.go("app.components.home");
-                        } else if (response.role == "admin") {
-
+                        } else if (response.data.ResponseObject.role == "admin") {
+$state.go("app.components.access");
                         } else {
-
+alert("Cant able to redirect");
                         }
-                        sessionStorage.setItem('foo', response);
                     }, function errorCallback(response) {
-                        alert("Please Ensure the Credentials");
+                        alert("Server Error");
                     });
+//                    $state.go("app.components.labour");
                 };
-                $scope.regi = function (data_log) {
-                    debugger;
-
-                    $state.go("appSimple.register");
-
-                };
-            }])
-        .controller('employercontrol', ['$scope', function ($scope) {
-            }])
+                    }])
         .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
                 cfpLoadingBarProvider.includeSpinner = false;
                 cfpLoadingBarProvider.latencyThreshold = 1;
             }])
-        .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
+        .run(['$rootScope', '$state', '$stateParams','$http', function ($rootScope, $state, $stateParams,$http) {
                 $rootScope.$on('$stateChangeSuccess', function () {
                     document.body.scrollTop = document.documentElement.scrollTop = 0;
                 });
                 $rootScope.$state = $state;
+	$rootScope.saved = localStorage.getItem('todos');
+                if($rootScope.saved){
+                   console.log($rootScope.saved);
+                   $rootScope.save={"auth_token":$rootScope.saved.auth_token};
+                    $http({
+                        method: 'POST',
+                        url: 'http://10.91.17.123:4000/auth/check_login',
+                        data: $rootScope.save
+                    }).then(function successCallback(response) {
+                   if (response.data.ResponseObject.role == "Employee") {
+                            $state.go("app.components.employee_home");
+                        } else if (response.data.ResponseObject.role == "Employer") {
+//app.components.home
+                            $state.go("app.components.home");
+                        } else if (response.data.ResponseObject.role == "admin") {
+$state.go("app.components.access");
+                        } else {
+alert("Cant able to redirect");
+                        }
+                    }, function errorCallback(response) {
+                        alert("Server Error");
+                    });
+              
+           }
                 return $rootScope.$stateParams = $stateParams;
             }]);
