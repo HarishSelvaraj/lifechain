@@ -3,10 +3,9 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div class="col-md-12">
+                    <div class="col-md-12" ng-init="employee = true; employer = false;">
                         <button class="btn btn-primary" ng-click="employee = true; employer = false;">Employee</button>
                         <button class="btn btn-primary" ng-click="employee = false; employer = true;">Employer</button>
-
                     </div>
                     <div class="tab-pane active" ng-if="employee" ng-controller="employeecontrol" style="margin-top:50px;">
                         <h4>Employee Registration Form</h4>
@@ -111,8 +110,8 @@
                             </div>
                             <div class="col-md-12 pull-right">
                                 <div class="pull-right">
-                                    <button type="submit" class="btn btn-primary" ng-click="save(employee)">Submit</button>
-                                    <button type="submit" class="btn btn-warning">Cancel</button>
+                                    <button type="submit" class="btn btn-sm btn-primary" ng-click="save(employee)"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger" ><i class="fa fa-ban"></i> Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +122,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="orgname">Organisation Name:</label>
-                                    <input type="text" class="form-control" id="orgname" placeholder="Enter your organisation name" name="orgname" ng-model="employer.orgname">
+                                    <input type="text" class="form-control" id="orgname" placeholder="Enter your organisation name" name="orgname" ng-model="employer.name">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -170,7 +169,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="pwd">Password:</label>
-                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="employer.pwd">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="employer.password">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -182,9 +181,8 @@
 
                             <div class="col-md-12 ">
                                 <div class="pull-right">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <button type="reset" class="btn btn-warning">Cancel</button>
-                                </div>
+                                    <button type="submit" class="btn btn-sm btn-primary" ng-click="save(employer)"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger" ><i class="fa fa-ban"></i> Cancel</button></div>
                             </div>
                         </form>
                     </div>

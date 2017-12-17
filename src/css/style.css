@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
  * CoreUI - Open Source Bootstrap Admin Template
  * @version v1.0.6
@@ -1487,8 +1487,7 @@ pre {
     opacity: 1; }
 
 select.form-control:not([size]):not([multiple]) {
-/*  height: calc(2.0625rem + 2px); */
-}
+  height: calc(2.0625rem + 2px); }
 
 select.form-control:focus::-ms-value {
   color: #3e515b;
@@ -7850,7 +7849,7 @@ base-chart.chart {
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 150px auto;
+    background-size: 70px auto;
     border-bottom: 1px solid #c2cfd6; }
   .app-header.navbar .navbar-toggler {
     min-width: 50px;

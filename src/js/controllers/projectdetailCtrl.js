@@ -1,5 +1,7 @@
-angular.module("app").controller('projectdetailCtrl', ['$scope', '$state', function ($scope, $state) {
-//alert('in');
-//        alert("addjobCtrl");
- 
+angular.module("app").controller('projectdetailCtrl', ['$scope', '$state', '$timeout', function ($scope, $state, $timeout) {
+
+        $scope.save_feedback = function () {
+            debugger;
+            $state.go("app.components.employee_home");
+        };
     }]);

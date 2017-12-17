@@ -10,15 +10,16 @@
                                 <div class="media">
                                     <div class="media-left">
                                         <a href="#">
-                                            <img class="media-object" src="../../../img/logo6.jpg"  alt="..." style="width: 90px;">
+                                            <img class="media-object" src="../../../img/logo6.jpg"  alt="..." style="width: 90px;
+                                                 border-radius: 50%;">
                                         </a>
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">Road Construction Company</h4>
-                                        <span>  <label class="form-group">Tenure : <span style="font-weight:300;">3 Months</span></label></span><br>
-                                        <span>  <label class="form-group">Start Date: <span style="font-weight:300;">01/11/2017</span></label></span>
-                                        <span>  <label class="form-group">End Date: <span style="font-weight:300;">01/01/2018</span></label></span>
-                                        <button class="btn btn-success pull-right">Renew Availablity</button>
+                                        <h4 class="media-heading">XYZ Construction Company</h4>
+                                        <span>  <label class="form-group">Tenure : <span style="font-weight:300;">5 Months</span></label></span><br>
+                                        <span>  <label class="form-group">Start Date: <span style="font-weight:300;">01/12/2017</span></label></span>
+                                        <span>  <label class="form-group">End Date: <span style="font-weight:300;">01/04/2018</span></label></span>
+                                        <button class="btn btn-success pull-right"> <i class="fa fa-address-book"></i> Renew Availability</button>
                                     </div>
                                 </div>
                             </div>
@@ -49,17 +50,60 @@
                                 </div>
                             </div>
                             <div class="card-text col-md-12">
-                                <div class="col-md-2">Mon &nbsp; <input type="checkbox" style="" checked="checked"></div>
-                                <div class="col-md-2">Tue &nbsp; <input type="checkbox" style="" checked="checked"></div>
-                                <div class="col-md-2">Wed &nbsp; <input type="checkbox" style="" checked="checked"></div>
-                                <div class="col-md-2">Thu &nbsp; <input type="checkbox" style="" checked="checked"></div>
-                                <div class="col-md-2">Fri &nbsp; <input type="checkbox" style="" ></div>
-                                <div class="col-md-2">Sat &nbsp;<input type="checkbox" style="" checked=""></div>
+                                <div class="col-md-2">Monday &nbsp;  
+                                    <label class="switch switch-text switch-pill switch-primary">
+                                        <input type="checkbox" class="switch-input" checked>
+                                        <span class="switch-label" data-on="On" data-off="Off"></span>
+                                        <span class="switch-handle"></span>
+                                    </label>
+                                    <label>Regularize</label> &nbsp;<input type="checkbox" checked="">
+                                </div>
+                                <div class="col-md-2">Tuesday &nbsp;
+                                    <label class="switch switch-text switch-pill switch-primary">
+                                        <input type="checkbox" class="switch-input" checked>
+                                        <span class="switch-label" data-on="P" data-off="Off"></span>
+                                        <span class="switch-handle"></span>
+                                    </label>
+                                    <p>&nbsp;<input type="checkbox" checked=""></p>
+                                </div>
+                                <div class="col-md-2">Wednesday &nbsp; 
+                                    <label class="switch switch-text switch-pill switch-primary">
+                                        <input type="checkbox" class="switch-input" checked>
+                                        <span class="switch-label" data-on="P" data-off="Off"></span>
+                                        <span class="switch-handle"></span>
+                                    </label>
+                                    <p>&nbsp;<input type="checkbox" checked=""></p>
+                                </div>
+                                <div class="col-md-2">Thursday &nbsp; 
+                                    <label class="switch switch-text switch-pill switch-danger">
+                                        <input type="checkbox" class="switch-input" checked>
+                                        <span class="switch-label" data-on="AB" data-off="Off"></span>
+                                        <span class="switch-handle"></span>
+                                    </label>
+                                    <p>&nbsp;<input type="checkbox"></p>
+                                </div>
+                                <div class="col-md-2">Friday &nbsp; 
+                                    <label class="switch switch-text switch-pill switch-primary">
+                                        <input type="checkbox" class="switch-input" checked>
+                                        <span class="switch-label" data-on="P" data-off="Off"></span>
+                                        <span class="switch-handle"></span>
+                                    </label>
+                                    <p>&nbsp;<input type="checkbox" checked=""></p>
+                                </div>
+                                <div class="col-md-2">Saturday &nbsp;
+                                    <label class="switch switch-text switch-pill switch-primary">
+                                        <input type="checkbox" class="switch-input" checked>
+                                        <span class="switch-label" data-on="P" data-off="Off"></span>
+                                        <span class="switch-handle"></span>
+                                    </label>
+                                    <p>&nbsp;<input type="checkbox" checked=""></p>
+                                </div>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="card-text pull-right">
-                                <button class="btn btn-success" ng-click="add_proj()"> Accept </button>
+                                <button class="btn btn-success"><i class="fa fa-check"></i> Accept </button>
+                                <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-o"></i> Regularize </button>
                             </div>
                         </div>
                     </div>
@@ -67,13 +111,14 @@
                         <h4 class="card-header text-center">Feedback</h4>
                         <div class="card-body">
                             <div class="card-text col-md-12">
-                                <p><label class="form-group">How are the facilities from Road Construction Company ?</label> &nbsp;&nbsp;&nbsp; Not at All &nbsp; <input type="radio" name="optradio"> 1 &nbsp; <input type="radio" name="optradio"> 2 &nbsp; <input type="radio" name="optradio"> 3 &nbsp; <input type="radio" name="optradio"> 4 &nbsp; <input type="radio" name="optradio">  5 &nbsp; Very Much &nbsp;</p>
-                                <p><label class="form-group">Any question about Road Construction Company ?</label> &nbsp;&nbsp;&nbsp; <input type="text" name="optradio"></p>
+                                <p><label class="form-group">1.How are the facilities from XYZ Construction Company ?</label> &nbsp;&nbsp;&nbsp; Poor &nbsp; <input type="radio" name="optradio"> 1 &nbsp; <input type="radio" name="optradio"> 2 &nbsp; <input type="radio" name="optradio"> 3 &nbsp; <input type="radio" name="optradio"> 4 &nbsp; <input type="radio" name="optradio">  5 &nbsp; Excellent &nbsp;</p>
+                                <p><label class="form-group">2.Any Grievance about XYZ Construction Company ?</label> &nbsp;&nbsp;&nbsp; <input type="text" name="optradio"></p>
+                                <button class="btn btn-success pull-right" ng-click="save_feedback()"> <i class="fa fa-foursquare"></i> Save</button>
                             </div>
                         </div>
                     </div>
                     <div class="card ">
-                        <h4 class="card-header text-center">Other Projects Post Tenure Expire</h4>
+                        <h4 class="card-header text-center">Other Projects (Post Tenure Expire)</h4>
                         <div class="container-fluid">
                             <div class="row" style="margin-top: 15px;">
                                 <div class="col-md-6" style="margin-top: 15px;">
@@ -112,3 +157,29 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" style="margin-top:50px;">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"> Regularize </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="comment">Enter the Notes:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-sm btn-primary" data-dismiss="modal"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                <button type="reset" class="btn btn-sm btn-danger" data-dismiss="modal"><i class="fa fa-ban"></i> Cancel</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--<div class="loader" ng-if="loader"></div>-->
+
