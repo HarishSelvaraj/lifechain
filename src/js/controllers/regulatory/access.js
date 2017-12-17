@@ -5,7 +5,7 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
         debugger; $rootScope.ajaxloader = true;
         $http({
             method: "POST",
-            url: "http://10.91.17.123:4000/auth/getnewapproval",
+            url: "http://localhost:4000/auth/getnewapproval",
             data: '',
             header: { 'content-type': 'application/JSON' }
         }).then(function mySuccess(response) {
@@ -22,14 +22,14 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
     }
     $scope.empApprove = function (empdata) {
         debugger;
-        $scope.token = localStorage.getItem('todo')
+        $scope.token = localStorage.getItem('todos')
         if ($scope.token) {
             $scope.auth_token = $scope.token.auth_token;
         }
 
         $http({
             method: "POST",
-            url: "http://10.91.17.123:4000/auth/empapproval/" + empdata._id,
+            url: "http://localhost:4000/auth/empapproval/" + empdata._id,
             data: '',
             header: { 'content-type': 'application/JSON', 'auth_token': $scope.auth_token }
         }).then(function mySuccess(response) {
@@ -40,13 +40,13 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
         });
     }
     $scope.empReject = function (empdata) {
-        $scope.token = localStorage.getItem('todo')
+        $scope.token = localStorage.getItem('todos')
         if ($scope.token) {
             $scope.auth_token = $scope.token.auth_token;
         }
         $http({
             method: "POST",
-            url: "http://10.91.17.123:4000/auth/empreject/" + empdata._id,
+            url: "http://localhost:4000/auth/empreject/" + empdata._id,
             data: '',
             header: { 'content-type': 'application/JSON', 'auth_token': $scope.auth_token }
         }).then(function mySuccess(response) {
@@ -57,14 +57,14 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
         });
     }
     $scope.jobApprove = function (empdata) {
-        $scope.token = localStorage.getItem('todo')
+        $scope.token = localStorage.getItem('todos')
         if ($scope.token) {
             $scope.auth_token = $scope.token.auth_token;
         }
         debugger;
         $http({
             method: "POST",
-            url: "http://10.91.17.123:4000/auth/empapproval/" + empdata._id,
+            url: "http://localhost:4000/auth/empapproval/" + empdata._id,
             data: '',
             header: { 'content-type': 'application/JSON', 'auth_token': $scope.auth_token }
         }).then(function mySuccess(response) {
@@ -75,13 +75,13 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
         });
     }
     $scope.jobReject = function (empdata) {
-        $scope.token = localStorage.getItem('todo')
+        $scope.token = localStorage.getItem('todos')
         if ($scope.token) {
             $scope.auth_token = $scope.token.auth_token;
         }
         $http({
             method: "POST",
-            url: "http://10.91.17.123:4000/auth/empreject/" + empdata._id,
+            url: "http://localhost:4000/auth/empreject/" + empdata._id,
             data: '',
             header: { 'content-type': 'application/JSON', 'auth_token': $scope.auth_token }
         }).then(function mySuccess(response) {
@@ -92,7 +92,7 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
         });
     }
     $scope.getddata();
-    $scope.stop = $interval(function () {
+    var stop = $interval(function () {
 
         $scope.getddata();
     }, 15000);
