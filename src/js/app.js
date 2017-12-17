@@ -217,7 +217,7 @@ $state.go("app.components.access");
 $state.go("appSimple.login");
                         }
                     }, function errorCallback(response) {
-                        alert("Server Error");
+                        // alert("Server Error");
                     });
               
            }
