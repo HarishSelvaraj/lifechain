@@ -47,7 +47,7 @@ angular
                             }
                         })
                         .state('app.components.jobs', {
-                            url: '/jobs',
+                          url: '/jobs/:projectID',
                             templateUrl: 'views/components/employer/jobs.html',
                             ncyBreadcrumb: {
                                 label: 'Jobs'
