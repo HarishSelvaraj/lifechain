@@ -3,7 +3,7 @@ angular.module("app").controller('addjobCtrl', ['$scope', '$state', '$http', 'ad
   $scope.postJobs = function (addJobs) {
     debugger;
     addjobsService.jobPost(addJobs, function () {
-
+      $scope.addJobs = {};
     }, function () {
 
     });
