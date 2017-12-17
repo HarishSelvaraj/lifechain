@@ -16,7 +16,7 @@ var brandPrimary = '#20a8d8';
                 'ncy-angular-breadcrumb',
                 'angular-loading-bar'
         ])
-        .controller('maincontrol', ['$scope', function ($scope) {
+        .controller('maincontrol', ['$rootScope','$scope', function ($rootScope,$scope) {
 //alert('in');
        $scope.menus = {
                   'Employee': [

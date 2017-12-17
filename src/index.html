@@ -55,41 +55,65 @@
 
   <!-- User Interface -->
   <ui-view class="app"></ui-view>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- Bootstrap and necessary plugins -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <div class="ajaxload" ng-show="ajaxloader">
+    <div class="ajaxloadIcon">
+      <img src="img/ajax-loader3.gif" alt="loader.gif" />
+    </div>
+  </div>
+  <div class="wallet">
+    <div class="walletIcon">
 
-  <!-- AngularJS -->
-  <script src="node_modules/angular/angular.min.js"></script>
+      <div class="card">
+        <div class="card-body p-3 clearfix">
+          <i class=" bg-primary p-3 font-2xl mr-3 float-left">
+            <img src="img/money.svg" alt="loader.gif" style="min-width: 48px;min-height: 22px;" />
+          </i>
 
-  <!-- AngularJS plugins -->
-  <script src="node_modules/angular-animate/angular-animate.min.js"></script>
-  <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-  <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
-  <script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
-  <script src="node_modules/angular-breadcrumb/dist/angular-breadcrumb.min.js"></script>
-  <script src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+          <div clas="well-sm">
+            <div class="h5 text-danger mb-2 mt-5" style="font-size:16px;font-weight:bold">$1.999,50</div>
+            <div class="text-muted text-uppercase font-weight-bold  text-center" style="font-size:14px;font-weight:bold">Coins</div>
+          </div>
+        </div>
 
-  <!-- AngularJS CoreUI App scripts -->
 
-  <script src="js/app.js"></script>
+      </div>
+    </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap and necessary plugins -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-  <script src="js/routes.js"></script>
+    <!-- AngularJS -->
+    <script src="node_modules/angular/angular.min.js"></script>
 
-  <script src="js/demo/routes.js"></script>
+    <!-- AngularJS plugins -->
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="node_modules/angular-breadcrumb/dist/angular-breadcrumb.min.js"></script>
+    <script src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
 
-  <script src="js/controllers.js"></script>
-  <script src="js/directives.js"></script>
-  <script src="js/controllers/employer/projects.js"></script>
-  <script src="js/controllers/employer/jobs.js"></script>
-  <script src="js/controllers/addjobCtrl.js" type="text/javascript"></script>
+    <!-- AngularJS CoreUI App scripts -->
+
+    <script src="js/app.js"></script>
+
+    <script src="js/routes.js"></script>
+
+    <script src="js/demo/routes.js"></script>
+
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/controllers/employer/projects.js"></script>
+    <script src="js/controllers/employer/jobs.js"></script>
+    <script src="js/controllers/addjobCtrl.js" type="text/javascript"></script>
     <script src="js/controllers/employeehomeCtrl.js" type="text/javascript"></script>
     <script src="js/controllers/labourCtrl.js" type="text/javascript"></script>
     <script src="js/controllers/projectdetailCtrl.js" type="text/javascript"></script>
-     <script src="js/controllers/regulatory/access.js" type="text/javascript"></script>
-  <script src="js/controllers/employer/company.js"></script>
+    <script src="js/controllers/regulatory/access.js" type="text/javascript"></script>
+    <script src="js/controllers/employer/company.js"></script>
 
 </body>
+
 </html>

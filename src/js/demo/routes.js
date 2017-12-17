@@ -29,7 +29,7 @@ angular
                             abstract: true,
                             template: '<ui-view></ui-view>',
                             ncyBreadcrumb: {
-                                label: 'Employer'
+                                label: ' '
                             }
                         })
                         .state('app.components.home', {

@@ -1,4 +1,36 @@
-﻿
+﻿.ajaxload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    opacity: 0.7;
+    bottom: 0;
+    z-index: 1111;
+}
+
+.ajaxloadIcon {
+    position: absolute;
+top: 50%;
+left: 50%;
+margin: -50px 0px 0px -50px;
+}
+.wallet {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  bottom: 0;
+  z-index: 1111;
+}
+
+.walletIcon {
+  position: absolute;
+top: 20%;
+margin: -20px 0px 0px -189px;
+width: 180px;
+
+}
 .rating-tab {
   font-family: Arial;
   margin: 0 auto; /* Center website */
