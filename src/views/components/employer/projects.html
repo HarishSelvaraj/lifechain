@@ -39,15 +39,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>20120101</td>
-                  <td>Samppa Nori</td>
+                <tr ng-repeat="pl in projectList" ng-click="selectProject(pl)" ng-class="{selected:pl.id===selectedProject.id}">
+                  <td>{{pl.id}}</td>
+                  <td>{{pl.name}}</td>
                   <td>
-                    <span class="badge badge-success"></span>Member</span>
+                    <span class="badge badge-success"></span>{{pl.type}}</span>
                   </td>
                   <td>
                     <div style="width:80px">
-                      <span class="pull-right">20</span>
+                      <span class="pull-right">{{pl.count}}</span>
                     </div>
                   </td>
                 </tr>
@@ -79,7 +79,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row" ng-if="selectedProject">
     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
       <div class="col-sm-12 col-md-12">
         <div class="card card-accent-primary">
@@ -89,15 +89,15 @@
           <div class="card-body">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="font-weight:bold">
               <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bold" style="font-weight:bold">Project ID</div>
-              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 h5 text-primary mb-1 mt-2">1221023</div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 h5 text-primary mb-1 mt-2">{{selectedProject.id}}</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-weight:bold">Project-Name</div>
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h5 text-primary mb-1 mt-2">REP RAP</div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h5 text-primary mb-1 mt-2">{{selectedProject.name}}</div>
             </div>
             <div class="col-sm-offset-6 col-md-offset-6 col-lg-offset-6 col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-weight:bold">Type</div>
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h5 text-danger mb-1 mt-2">Contractor</div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h5 text-danger mb-1 mt-2">{{selectedProject.type}}</div>
             </div>
           </div>
         </div>
@@ -148,6 +148,13 @@
                   <td class="text-center">Raju</td>
                   <td class="text-center">Indian</td>
                   <td class="text-center">Construction Worker</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td class="text-center">236751789</td>
+                  <td class="text-center">Ananth</td>
+                  <td class="text-center">US</td>
+                  <td class="text-center">Civil Worker</td>
                 </tr>
               </tbody>
             </table>

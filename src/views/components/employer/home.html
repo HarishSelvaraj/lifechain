@@ -1,4 +1,4 @@
-<div class="animated fadeIn">
+<div class="animated fadeIn" ng-controller="companycontrol">
   <div class="row">
     <div class="col-md-12">
       <div class="card">
@@ -11,8 +11,8 @@
               <div class="each-contact">
                 <h4>INDIA - Chennai</h4>
                 <p>
-                  3rd Floor, "Block A", Tek Meadows, No. 51,
-                  <br>Rajiv Gandhi Salai (OMR),
+                  3rd Floor, "Block A", Tek Meadows,
+                  <br>No. 51,Rajiv Gandhi Salai (OMR),
                   <br>Sholinganallur, Chennai - 600119
                 </p>
                 <p>
@@ -72,16 +72,16 @@
           <a ui-sref="app.components.addJobs"><i class="fa fa-plus-circle fa-lg float-right">ADD</i></a>
         </div>
         <div class="card-body">
-          <div class="card-jobs">
+          <div class="card-jobs" ng-repeat="pl in projectList">
             <div class="card">
               <div class="card-body">
-                <div class="text-muted text-uppercase font-weight-bold">Project_ID: JB12</div>
-                <p>#500 Appointments</p>
-                <a class="h5 text-info mb-0 font-weight-bold float-right" ui-sref="app.components.jobs">view</a>
+                <div class="text-muted text-uppercase font-weight-bold">Project_ID: {{pl.id}}</div>
+                <p>#{{pl.applicants}} Appointments</p>
+                <a class="h5 text-info mb-0 font-weight-bold float-right" ui-sref="app.components.jobs({projectID:pl.id})">view</a>
               </div>
             </div>
           </div>
-          <div class="card-jobs">
+          <!--<div class="card-jobs">
             <div class="card">
               <div class="card-body">
 
@@ -108,7 +108,7 @@
                 <a class="h5 text-info mb-0 font-weight-bold float-right" ui-sref="app.components.jobs">view</a>
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
