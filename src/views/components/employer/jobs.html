@@ -53,7 +53,13 @@
       </thead>
       <tbody>
         <tr>
-          <td class="text-center">1</td>
+          <td class="text-center">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+              </label>
+            </div>
+          </td>
           <td class="text-center">120322322</td>
           <td class="text-center">Raju</td>
           <td class="text-center">50</td>
@@ -62,7 +68,13 @@
 
         </tr>
         <tr>
-          <td class="text-center">1</td>
+          <td class="text-center">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+              </label>
+            </div>
+          </td>
           <td class="text-center">120322322</td>
           <td class="text-center">Raju</td>
           <td class="text-center">50</td>
@@ -71,7 +83,13 @@
 
         </tr>
         <tr>
-          <td class="text-center">1</td>
+          <td class="text-center">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+              </label>
+            </div>
+          </td>
           <td class="text-center">120322322</td>
           <td class="text-center">Raju</td>
           <td class="text-center">50</td>
@@ -80,7 +98,13 @@
 
         </tr>
         <tr>
-          <td class="text-center">1</td>
+          <td class="text-center">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+              </label>
+            </div>
+          </td>
           <td class="text-center">120322322</td>
           <td class="text-center">Raju</td>
           <td class="text-center">50</td>
@@ -89,7 +113,13 @@
 
         </tr>
         <tr>
-          <td class="text-center">1</td>
+          <td class="text-center">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" ng-model="checkboxModel.value2" ng-true-value="'YES'" ng-false-value="'NO'">
+              </label>
+            </div>
+          </td>
           <td class="text-center">120322322</td>
           <td class="text-center">Raju</td>
           <td class="text-center">50</td>
@@ -98,7 +128,13 @@
 
         </tr>
         <tr>
-          <td class="text-center">1</td>
+          <td class="text-center">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+              </label>
+            </div>
+          </td>
           <td class="text-center">120322322</td>
           <td class="text-center">Raju</td>
           <td class="text-center">50</td>
@@ -112,8 +148,24 @@
   <div class="col-sm-5 col-md-5 col-lg-5">
     <div class="card-header">
       <span style="font-weight:bold">Daily Wage - Mode</span>
-      <canvas class="chart chart-bar" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colors" ></canvas>
-      
+      <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colors"></canvas>
     </div>
+    <div class="well-sm">
+      <span style="display:inline-block" class="font-weight-bold"> Provide a price </span>
+      <input type="text" ng-model="price" class="form-control" style="width:100px;display:inline-block"/> /
+      <select style="width:100px;display:inline-block" class="form-control">
+        <option value=''>day</option>
+        <option value=''>month</option>
+        <option value=''>year</option>
+      </select>
+    </div>
+    <div clas="card card-primary">
+      <button class="btn btn-danger pull-right">Submit</button>
+    </div>
+  </div>
+</div>
+<div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 well-sm ">
+  <div class="text-center">
+    <button class="btn btn-primary">Request Access</button>
   </div>
 </div>
