@@ -19,6 +19,11 @@ angular
         .controller('maincontrol', ['$scope','$rootScope','$http','$state', function ($scope,$rootScope,$http,$state) {
                 debugger;
 $scope.user = {};
+$scope.logout=function(){
+    debugger;
+    localStorage.clear();
+    $state.go("appSimple.login");
+}
                 $scope.reg = function (data_log) {
                     debugger;
                    
