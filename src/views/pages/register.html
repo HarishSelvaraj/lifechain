@@ -122,7 +122,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="orgname">Organisation Name:</label>
-                                    <input type="text" class="form-control" id="orgname" placeholder="Enter your organisation name" name="orgname" ng-model="employer.orgname">
+                                    <input type="text" class="form-control" id="orgname" placeholder="Enter your organisation name" name="orgname" ng-model="employer.name">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -169,7 +169,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="pwd">Password:</label>
-                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="employer.pwd">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="employer.password">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -181,7 +181,7 @@
 
                             <div class="col-md-12 ">
                                 <div class="pull-right">
-                                    <button type="submit" class="btn btn-sm btn-primary" ui-sref="appSimple.login"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="submit" class="btn btn-sm btn-primary" ng-click="save(employer)"><i class="fa fa-dot-circle-o"></i> Submit</button>
                                     <button type="reset" class="btn btn-sm btn-danger" ><i class="fa fa-ban"></i> Cancel</button></div>
                             </div>
                         </form>
