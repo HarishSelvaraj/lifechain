@@ -58,25 +58,25 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Employer LF ID</th>
-                  <th>Organisation Name</th>
-                  <th>TAN Number</th>
-                  <th>Registration Number</th>
+                  <th>Project</th>
+                  <th>Skill</th>
+                  <th># of Openings</th>
+                  <th>Experience</th>
                   <th>Approve/Cancel</th>
                 </tr>
               </thead>
               <tbody>
-                <tr ng-repeat="empdata in Accessdata[0].job_post">
-                  <td>{{empdata.systemid}}</td>
-                  <td>{{empdata.name}}</td>
-                  <td>{{empdata.orgtype}}</td>
+                <tr ng-repeat="empdata in Accessdata[1].job_post">
+                  <td>{{empdata.projectName}}</td>
+                  <td>{{empdata.skill}}</td>
+                  <td>{{empdata.openings}}</td>
                   <td>
-                    {{empdata.regnum}}
+                    {{empdata.exptime}}{{empdata.expduration}}
                   </td>
                   <td>
-                      <button type="submit" class="btn btn-sm btn-success" ng-click="empApprove(empdata)">
+                      <button type="submit" class="btn btn-sm btn-success" ng-click="jobApprove(empdata)">
                           <i class="fa fa-check"></i> Approve</button>
-                        <button type="reset" class="btn btn-sm btn-danger" ng-click="empReject(empdata)">
+                        <button type="reset" class="btn btn-sm btn-danger" ng-click="jobReject(empdata)">
                           <i class="fa fa-ban"></i> Reject</button>
                   </td>
                 </tr>
