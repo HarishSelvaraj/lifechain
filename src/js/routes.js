@@ -1,7 +1,7 @@
 angular
 .module('app')
 .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$breadcrumbProvider', function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $breadcrumbProvider) {
-
+  $urlRouterProvider.otherwise('/login');
   $ocLazyLoadProvider.config({
     // Set to true if you want to see what and when is dynamically loaded
     debug: true
