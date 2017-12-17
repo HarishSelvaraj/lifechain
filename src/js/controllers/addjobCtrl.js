@@ -2,6 +2,7 @@ angular.module("app").controller('addjobCtrl', ['$scope', '$state', '$http', 'ad
   $scope.addJobs = {};
   $scope.postJobs = function (addJobs) {
     debugger;
+    addJobs.appstatus = 2;
     addjobsService.jobPost(addJobs, function () {
       $scope.addJobs = {};
     }, function () {

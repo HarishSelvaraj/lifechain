@@ -13,6 +13,7 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
             $timeout(function () {
                 $rootScope.ajaxloader = false
             }, 3000);
+            debugger;
             $scope.Accessdata = response['data']['ResponseObject'];
             debugger;
         }, function myError(response) {
