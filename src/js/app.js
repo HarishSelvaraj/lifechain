@@ -17,6 +17,7 @@ angular
             'angular-loading-bar'
         ])
         .controller('maincontrol', ['$scope', function ($scope) {
+                
                 $scope.login = sessionStorage.getItem('foo');
 
                 $scope.menus = {
@@ -38,12 +39,11 @@ angular
                             name: "Add Job",
                             uiSref: "app.components.addJobs"
                         }],
-                    'Regulatory': []
+                    'Regulatory': [{
+                    name: "Access Manager",
+                    uiSref: "app.components.access"
+                  }]
                 };
-                // {
-                //     name: "Job Openings",
-                //     uiSref: "app.components.jobs"
-                //   },
             }])
         .controller('employeecontrol', ['$scope', '$state', '$http', function ($scope, $state, $http) {
                 $scope.validatePassword = function (employee) {
