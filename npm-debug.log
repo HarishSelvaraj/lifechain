@@ -1,0 +1,293 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'gulp',
+1 verbose cli   'build' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.3
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData gulp@^3.9.1
+8 silly fetchPackageMetaData build
+9 silly fetchNamedPackageData gulp
+10 silly mapToRegistry name gulp
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'gulp',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'gulp',
+13 silly mapToRegistry   name: 'gulp',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/gulp
+15 silly fetchNamedPackageData build
+16 silly mapToRegistry name build
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry data Result {
+19 silly mapToRegistry   raw: 'build',
+19 silly mapToRegistry   scope: null,
+19 silly mapToRegistry   escapedName: 'build',
+19 silly mapToRegistry   name: 'build',
+19 silly mapToRegistry   rawSpec: '',
+19 silly mapToRegistry   spec: 'latest',
+19 silly mapToRegistry   type: 'tag' }
+20 silly mapToRegistry uri https://registry.npmjs.org/build
+21 verbose request uri https://registry.npmjs.org/build
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 3:35:21 PM
+24 verbose request id dae62c4587499e7d
+25 http request GET https://registry.npmjs.org/build
+26 verbose request uri https://registry.npmjs.org/gulp
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 3:35:21 PM
+29 verbose etag "5a336ede-1d93a"
+30 verbose lastModified Fri, 15 Dec 2017 6:42:38 GMT
+31 http request GET https://registry.npmjs.org/gulp
+32 http 304 https://registry.npmjs.org/gulp
+33 verbose headers { date: 'Sun, 17 Dec 2017 10:08:58 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   etag: '"5a336ede-1d93a"',
+33 verbose headers   age: '11777',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-sin18034-SIN',
+33 verbose headers   'x-cache': 'HIT',
+33 verbose headers   'x-cache-hits': '14',
+33 verbose headers   'x-timer': 'S1513505338.109700,VS0,VE0',
+33 verbose headers   vary: 'Accept-Encoding, Accept' }
+34 silly get cb [ 304,
+34 silly get   { date: 'Sun, 17 Dec 2017 10:08:58 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     'cache-control': 'max-age=300',
+34 silly get     etag: '"5a336ede-1d93a"',
+34 silly get     age: '11777',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-sin18034-SIN',
+34 silly get     'x-cache': 'HIT',
+34 silly get     'x-cache-hits': '14',
+34 silly get     'x-timer': 'S1513505338.109700,VS0,VE0',
+34 silly get     vary: 'Accept-Encoding, Accept' } ]
+35 verbose etag https://registry.npmjs.org/gulp from cache
+36 verbose get saving gulp to C:\Users\manickaraj.s\AppData\Roaming\npm-cache\registry.npmjs.org\gulp\.cache.json
+37 verbose correctMkdir C:\Users\manickaraj.s\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+38 http 200 https://registry.npmjs.org/build
+39 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+39 verbose headers   server: 'UploadServer',
+39 verbose headers   'cache-control': 'max-age=300',
+39 verbose headers   'last-modified': 'Sun, 5 Feb 2012 6:23:06 GMT',
+39 verbose headers   etag: '"4f2e204a-1113"',
+39 verbose headers   'content-encoding': 'gzip',
+39 verbose headers   'content-length': '847',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Sun, 17 Dec 2017 10:08:58 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   age: '0',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-sin18026-SIN',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1513505338.110707,VS0,VE253',
+39 verbose headers   vary: 'Accept-Encoding, Accept' }
+40 silly get cb [ 200,
+40 silly get   { 'content-type': 'application/json; charset=UTF-8',
+40 silly get     server: 'UploadServer',
+40 silly get     'cache-control': 'max-age=300',
+40 silly get     'last-modified': 'Sun, 5 Feb 2012 6:23:06 GMT',
+40 silly get     etag: '"4f2e204a-1113"',
+40 silly get     'content-encoding': 'gzip',
+40 silly get     'content-length': '847',
+40 silly get     'accept-ranges': 'bytes',
+40 silly get     date: 'Sun, 17 Dec 2017 10:08:58 GMT',
+40 silly get     via: '1.1 varnish',
+40 silly get     age: '0',
+40 silly get     connection: 'keep-alive',
+40 silly get     'x-served-by': 'cache-sin18026-SIN',
+40 silly get     'x-cache': 'MISS',
+40 silly get     'x-cache-hits': '0',
+40 silly get     'x-timer': 'S1513505338.110707,VS0,VE253',
+40 silly get     vary: 'Accept-Encoding, Accept' } ]
+41 verbose get saving build to C:\Users\manickaraj.s\AppData\Roaming\npm-cache\registry.npmjs.org\build\.cache.json
+42 verbose correctMkdir C:\Users\manickaraj.s\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+43 silly install normalizeTree
+44 silly loadCurrentTree Finishing
+45 silly loadIdealTree Starting
+46 silly install loadIdealTree
+47 silly cloneCurrentTree Starting
+48 silly install cloneCurrentTreeToIdealTree
+49 silly cloneCurrentTree Finishing
+50 silly loadShrinkwrap Starting
+51 silly install loadShrinkwrap
+52 silly loadShrinkwrap Finishing
+53 silly loadAllDepsIntoIdealTree Starting
+54 silly install loadAllDepsIntoIdealTree
+55 silly resolveWithNewModule gulp@3.9.1 checking installable status
+56 silly cache add args [ 'gulp@^3.9.1', null ]
+57 verbose cache add spec gulp@^3.9.1
+58 silly resolveWithNewModule build@0.1.4 checking installable status
+59 silly cache add args [ 'build', null ]
+60 verbose cache add spec build
+61 silly cache add parsed spec Result {
+61 silly cache add   raw: 'gulp@^3.9.1',
+61 silly cache add   scope: null,
+61 silly cache add   escapedName: 'gulp',
+61 silly cache add   name: 'gulp',
+61 silly cache add   rawSpec: '^3.9.1',
+61 silly cache add   spec: '>=3.9.1 <4.0.0',
+61 silly cache add   type: 'range' }
+62 silly addNamed gulp@>=3.9.1 <4.0.0
+63 verbose addNamed ">=3.9.1 <4.0.0" is a valid semver range for gulp
+64 silly addNameRange { name: 'gulp', range: '>=3.9.1 <4.0.0', hasData: false }
+65 silly mapToRegistry name gulp
+66 silly mapToRegistry using default registry
+67 silly mapToRegistry registry https://registry.npmjs.org/
+68 silly mapToRegistry data Result {
+68 silly mapToRegistry   raw: 'gulp',
+68 silly mapToRegistry   scope: null,
+68 silly mapToRegistry   escapedName: 'gulp',
+68 silly mapToRegistry   name: 'gulp',
+68 silly mapToRegistry   rawSpec: '',
+68 silly mapToRegistry   spec: 'latest',
+68 silly mapToRegistry   type: 'tag' }
+69 silly mapToRegistry uri https://registry.npmjs.org/gulp
+70 verbose addNameRange registry:https://registry.npmjs.org/gulp not in flight; fetching
+71 silly cache add parsed spec Result {
+71 silly cache add   raw: 'build',
+71 silly cache add   scope: null,
+71 silly cache add   escapedName: 'build',
+71 silly cache add   name: 'build',
+71 silly cache add   rawSpec: '',
+71 silly cache add   spec: 'latest',
+71 silly cache add   type: 'tag' }
+72 silly addNamed build@latest
+73 verbose addNamed "latest" is being treated as a dist-tag for build
+74 info addNameTag [ 'build', 'latest' ]
+75 silly mapToRegistry name build
+76 silly mapToRegistry using default registry
+77 silly mapToRegistry registry https://registry.npmjs.org/
+78 silly mapToRegistry data Result {
+78 silly mapToRegistry   raw: 'build',
+78 silly mapToRegistry   scope: null,
+78 silly mapToRegistry   escapedName: 'build',
+78 silly mapToRegistry   name: 'build',
+78 silly mapToRegistry   rawSpec: '',
+78 silly mapToRegistry   spec: 'latest',
+78 silly mapToRegistry   type: 'tag' }
+79 silly mapToRegistry uri https://registry.npmjs.org/build
+80 verbose addNameTag registry:https://registry.npmjs.org/build not in flight; fetching
+81 verbose get https://registry.npmjs.org/gulp not expired, no request
+82 silly addNameRange number 2 { name: 'gulp', range: '>=3.9.1 <4.0.0', hasData: true }
+83 silly addNameRange versions [ 'gulp',
+83 silly addNameRange   [ '0.0.1',
+83 silly addNameRange     '0.0.2',
+83 silly addNameRange     '0.0.3',
+83 silly addNameRange     '0.0.4',
+83 silly addNameRange     '0.0.5',
+83 silly addNameRange     '0.0.7',
+83 silly addNameRange     '0.0.8',
+83 silly addNameRange     '0.0.9',
+83 silly addNameRange     '0.1.0',
+83 silly addNameRange     '0.2.0',
+83 silly addNameRange     '1.0.0',
+83 silly addNameRange     '1.1.0',
+83 silly addNameRange     '1.2.0',
+83 silly addNameRange     '1.2.1',
+83 silly addNameRange     '2.0.0',
+83 silly addNameRange     '2.0.1',
+83 silly addNameRange     '2.1.0',
+83 silly addNameRange     '2.2.0',
+83 silly addNameRange     '2.3.0',
+83 silly addNameRange     '2.4.0',
+83 silly addNameRange     '2.4.1',
+83 silly addNameRange     '2.6.0',
+83 silly addNameRange     '2.6.1',
+83 silly addNameRange     '2.7.0',
+83 silly addNameRange     '3.0.0',
+83 silly addNameRange     '3.1.1',
+83 silly addNameRange     '3.1.2',
+83 silly addNameRange     '3.1.3',
+83 silly addNameRange     '3.1.4',
+83 silly addNameRange     '3.2.0',
+83 silly addNameRange     '3.2.1',
+83 silly addNameRange     '3.2.2',
+83 silly addNameRange     '3.2.3',
+83 silly addNameRange     '3.2.4',
+83 silly addNameRange     '3.2.5',
+83 silly addNameRange     '3.3.0',
+83 silly addNameRange     '3.3.1',
+83 silly addNameRange     '3.3.2',
+83 silly addNameRange     '3.3.4',
+83 silly addNameRange     '3.4.0',
+83 silly addNameRange     '3.5.0',
+83 silly addNameRange     '3.5.1',
+83 silly addNameRange     '3.5.2',
+83 silly addNameRange     '3.5.5',
+83 silly addNameRange     '3.5.6',
+83 silly addNameRange     '3.6.0',
+83 silly addNameRange     '3.6.1',
+83 silly addNameRange     '3.6.2',
+83 silly addNameRange     '3.7.0',
+83 silly addNameRange     '3.8.0',
+83 silly addNameRange     '3.8.1',
+83 silly addNameRange     '3.8.2',
+83 silly addNameRange     '3.8.3',
+83 silly addNameRange     '3.8.4',
+83 silly addNameRange     '3.8.5',
+83 silly addNameRange     '3.8.6',
+83 silly addNameRange     '3.8.7',
+83 silly addNameRange     '3.8.8',
+83 silly addNameRange     '3.8.9',
+83 silly addNameRange     '3.8.10',
+83 silly addNameRange     '3.8.11',
+83 silly addNameRange     '3.9.0',
+83 silly addNameRange     '3.9.1' ] ]
+84 silly addNamed gulp@3.9.1
+85 verbose addNamed "3.9.1" is a plain semver version for gulp
+86 verbose get https://registry.npmjs.org/build not expired, no request
+87 silly addNameTag next cb for build with tag latest
+88 silly addNamed build@0.1.4
+89 verbose addNamed "0.1.4" is a plain semver version for build
+90 silly mapToRegistry name build
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry https://registry.npmjs.org/
+93 silly mapToRegistry data Result {
+93 silly mapToRegistry   raw: 'build',
+93 silly mapToRegistry   scope: null,
+93 silly mapToRegistry   escapedName: 'build',
+93 silly mapToRegistry   name: 'build',
+93 silly mapToRegistry   rawSpec: '',
+93 silly mapToRegistry   spec: 'latest',
+93 silly mapToRegistry   type: 'tag' }
+94 silly mapToRegistry uri https://registry.npmjs.org/build
+95 verbose addRemoteTarball https://registry.npmjs.org/build/-/build-0.1.4.tgz not in flight; adding
+96 verbose addRemoteTarball [ 'https://registry.npmjs.org/build/-/build-0.1.4.tgz',
+96 verbose addRemoteTarball   '707fe026ffceddcacbfdcdf356eafda64f151046' ]
+97 silly cache afterAdd gulp@3.9.1
+98 verbose afterAdd C:\Users\manickaraj.s\AppData\Roaming\npm-cache\gulp\3.9.1\package\package.json not in flight; writing
+99 verbose correctMkdir C:\Users\manickaraj.s\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+100 info retry fetch attempt 1 at 3:35:22 PM
+101 info attempt registry request try #1 at 3:35:22 PM
+102 http fetch GET https://registry.npmjs.org/build/-/build-0.1.4.tgz
+103 verbose afterAdd C:\Users\manickaraj.s\AppData\Roaming\npm-cache\gulp\3.9.1\package\package.json written
+104 http fetch 200 https://registry.npmjs.org/build/-/build-0.1.4.tgz
+105 warn retry will retry, error on last attempt: Error: EBUSY: resource busy or locked, rename 'C:\Users\MANICK~1.S\AppData\Local\Temp\npm-19988-246f04e0\registry.npmjs.org\build\-\build-0.1.4.tgz.1615323011' -> 'C:\Users\MANICK~1.S\AppData\Local\Temp\npm-19988-246f04e0\registry.npmjs.org\build\-\build-0.1.4.tgz'
+106 verbose stack TypeError: tarball.destroy is not a function
+106 verbose stack     at WriteStreamAtomic.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-remote-tarball.js:97:15)
+106 verbose stack     at emitOne (events.js:101:20)
+106 verbose stack     at WriteStreamAtomic.emit (events.js:188:7)
+106 verbose stack     at WriteStreamAtomic.emit (C:\Program Files\nodejs\node_modules\npm\node_modules\fs-write-stream-atomic\index.js:60:34)
+106 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\fs-write-stream-atomic\index.js:89:19
+106 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+107 verbose cwd D:\life\lifechain
+108 error Windows_NT 10.0.15063
+109 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "gulp" "build"
+110 error node v6.9.3
+111 error npm  v3.10.10
+112 error tarball.destroy is not a function
+113 error If you need help, you may report this error at:
+113 error     <https://github.com/npm/npm/issues>
+114 verbose exit [ 1, true ]

@@ -7,7 +7,7 @@
         'Content-Type': 'application/json',
         "auth_token": JSON.parse(localStorage.todos).auth_token
       }
-      $http.post("http://10.91.17.123:4000/auth/jobpost", data, { headers: headers })
+      $http.post("http://10.91.17.148:4000/auth/jobpost", data, { headers: headers })
         .then(success, error);
 
     }

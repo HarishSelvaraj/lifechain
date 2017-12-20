@@ -29,7 +29,7 @@ $scope.logout=function(){
                    
                     $http({
                         method: 'POST',
-                        url: 'http://10.91.17.123:4000/auth/login',
+                        url: 'http://10.91.17.148:4000/auth/login',
                         data: data_log
                     }).then(function successCallback(response) {
                           localStorage.setItem('todos', JSON.stringify(response.data.ResponseObject));
@@ -113,7 +113,7 @@ alert("Cant able to redirect");
                     debugger;
                     $http({
                         method: 'POST',
-                        url: ' http://10.91.17.123:4000/auth/signup',
+                        url: ' http://10.91.17.148:4000/auth/signup',
                         data: data_log
                     }).then(function successCallback(response) {
 
@@ -131,7 +131,7 @@ alert("Cant able to redirect");
                    
                     $http({
                         method: 'POST',
-                        url: 'http://10.91.17.123:4000/auth/login',
+                        url: 'http://10.91.17.148:4000/auth/login',
                         data: data_log
                     }).then(function successCallback(response) {
                           localStorage.setItem('todos', JSON.stringify(response.data.ResponseObject));
@@ -168,7 +168,7 @@ alert("Cant able to redirect");
                     debugger;
                     $http({
                         method: 'POST',
-                        url: ' http://10.91.17.123:4000/auth/signup',
+                        url: ' http://10.91.17.148:4000/auth/signup',
                         data: data_log
                     }).then(function successCallback(response) {
                    if (response.data.ResponseObject.role == "Employee") {
@@ -203,7 +203,7 @@ alert("Cant able to redirect");
                    $rootScope.save={"auth_token":$rootScope.role.auth_token};
                     $http({
                         method: 'POST',
-                        url: 'http://10.91.17.123:4000/auth/check_login',
+                        url: 'http://10.91.17.148:4000/auth/check_login',
                         headers:$rootScope.save
                     }).then(function successCallback(response) {
                    if ($rootScope.role.role == "Employee") {
