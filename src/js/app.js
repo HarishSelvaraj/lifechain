@@ -42,7 +42,7 @@ angular
                 //app.components.home
                 $state.go("app.components.home");
               } else if (response.data.ResponseObject.role == "admin") {
-                $state.go("app.components.access");
+                $state.go("app.components.dashboard");
               } else {
                 alert("Cant able to redirect");
               }
@@ -80,6 +80,9 @@ angular
               uiSref: "app.components.addJobs"
             }],
             'Regulatory': [{
+              name: "Dashboard",
+              uiSref: "app.components.dashboard"
+            },{
               name: "Access Manager",
               uiSref: "app.components.access"
             }, {
@@ -147,7 +150,7 @@ angular
                 //app.components.home
                 $state.go("app.components.home");
               } else if (response.data.ResponseObject.role == "admin") {
-                $state.go("app.components.access");
+                $state.go("app.components.dashboard");
               } else {
                 alert("Cant able to redirect");
               }
@@ -181,7 +184,7 @@ angular
                 //app.components.home
                 $state.go("app.components.home");
               } else if (response.data.ResponseObject.role == "admin") {
-                $state.go("app.components.access");
+                $state.go("app.components.dashboard");
               } else {
                 alert("Cant able to redirect");
               }
@@ -216,7 +219,7 @@ angular
                 //app.components.home
                 $state.go("app.components.home");
               } else if ($rootScope.role.role == "admin") {
-                $state.go("app.components.access");
+                $state.go("app.components.dashboard");
               } else {
                 $state.go("appSimple.login");
               }
