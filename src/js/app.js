@@ -81,6 +81,9 @@ angular
             'Regulatory': [{
               name: "Access Manager",
               uiSref: "app.components.access"
+            }, {
+              name: "Users",
+              uiSref: "app.components.users"
             }]
           };
         }])
