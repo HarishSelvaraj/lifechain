@@ -25,7 +25,7 @@
       'Content-Type': 'application/json',
       "auth_token": JSON.parse(localStorage.todos).auth_token
     }
-      $http.get(baseURL() + "/auth/dashtwo", data, { headers: headers })
+      $http.get(baseURL() + "/auth/dashthree", { headers: headers })
       .then(success, error);
 
   }

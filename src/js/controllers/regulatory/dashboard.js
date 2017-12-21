@@ -6,5 +6,7 @@
     debugger;
     $scope.Employer = data.data.ResponseObject[0].Employer
   }, function () { });
-  //dashboardService.getJobsList("", function () { }, function () { });
+  dashboardService.getJobsList("", function (data,status) {
+    $scope.jobs = data.data.ResponseObject[0].jobCount
+  }, function () { });
 }]);
