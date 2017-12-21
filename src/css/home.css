@@ -1,20 +1,21 @@
 ﻿.ajaxload {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    opacity: 0.7;
-    bottom: 0;
-    z-index: 1111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  opacity: 0.7;
+  bottom: 0;
+  z-index: 1111;
 }
 
 .ajaxloadIcon {
-    position: absolute;
-top: 50%;
-left: 50%;
-margin: -50px 0px 0px -50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0px 0px -50px;
 }
+
 .wallet {
   position: fixed;
   top: 0;
@@ -26,11 +27,11 @@ margin: -50px 0px 0px -50px;
 
 .walletIcon {
   position: absolute;
-    width: 180px;
-    top: 0;
-    right: 200px;
-
+  width: 180px;
+  top: 0;
+  right: 200px;
 }
+
 .rating-tab {
   font-family: Arial;
   margin: 0 auto; /* Center website */
@@ -133,4 +134,31 @@ margin: -50px 0px 0px -50px;
 
 .selected {
   background-color: #f1f1f1;
+}
+
+.blue-text {
+  color: #74b2e8;
+}
+.ledger::-webkit-scrollbar {
+   position: absolute !important;
+   width: 8px !important;
+   margin-left: -10px !important;
+   -webkit-appearance: none !important;
+}
+
+.ledger::-webkit-scrollbar-thumb {
+   height: 20px !important;
+   background-color: white !important;
+   border-color: transparent !important;
+   border-radius: 10px !important;
+}
+
+.ledgerSidebar{
+ top: 90px !important;
+ height: calc(100vh - 140px) !important;
+}
+
+.ledger::-webkit-scrollbar-track {
+  background-color:transparent !important;
+  
 }

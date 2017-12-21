@@ -2,10 +2,10 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
     //alert('in');
     //        alert("addjobCtrl");
     $scope.getddata = function () {
-        debugger; $rootScope.ajaxloader = true;
+        $rootScope.ajaxloader = true;
         $http({
             method: "POST",
-            url: "http://localhost:4000/auth/getnewapproval",
+            url: baseURL()+"/auth/getnewapproval",
             data: '',
             header: { 'content-type': 'application/JSON' }
         }).then(function mySuccess(response) {
@@ -13,15 +13,14 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
             $timeout(function () {
                 $rootScope.ajaxloader = false
             }, 3000);
-            debugger;
             $scope.Accessdata = response['data']['ResponseObject'];
-            debugger;
+            
         }, function myError(response) {
             $rootScope.ajaxloader = false;
         });
     }
     $scope.empApprove = function (empdata) {
-        debugger;
+       
         $scope.token = localStorage.getItem('todos')
         if ($scope.token) {
             $scope.auth_token = $scope.token.auth_token;
@@ -29,12 +28,12 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
 
         $http({
             method: "POST",
-            url: "http://localhost:4000/auth/empapproval/" + empdata._id,
+            url: baseURL()+"/auth/empapproval/" + empdata._id,
             data: '',
             header: { 'content-type': 'application/JSON', 'auth_token': $scope.auth_token }
         }).then(function mySuccess(response) {
             $scope.Accessdata = response['data']['ResponseObject'];
-            debugger;
+          
         }, function myError(response) {
 
         });
@@ -46,12 +45,12 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
         }
         $http({
             method: "POST",
-            url: "http://localhost:4000/auth/empreject/" + empdata._id,
+            url: baseURL()+"/auth/empreject/" + empdata._id,
             data: '',
             header: { 'content-type': 'application/JSON', 'auth_token': $scope.auth_token }
         }).then(function mySuccess(response) {
             $scope.Accessdata = response['data']['ResponseObject'];
-            debugger;
+           
         }, function myError(response) {
 
         });
@@ -61,15 +60,15 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
         if ($scope.token) {
             $scope.auth_token = $scope.token.auth_token;
         }
-        debugger;
+      
         $http({
             method: "POST",
-            url: "http://localhost:4000/auth/empapproval/" + empdata._id,
+            url: baseURL()+"/auth/empapproval/" + empdata._id,
             data: '',
             header: { 'content-type': 'application/JSON', 'auth_token': $scope.auth_token }
         }).then(function mySuccess(response) {
             $scope.Accessdata = response['data']['ResponseObject'];
-            debugger;
+           
         }, function myError(response) {
 
         });
@@ -81,12 +80,12 @@ angular.module("app").controller('accessCtrl', ['$rootScope', '$scope', '$state'
         }
         $http({
             method: "POST",
-            url: "http://localhost:4000/auth/empreject/" + empdata._id,
+            url: baseURL()+"/auth/empreject/" + empdata._id,
             data: '',
             header: { 'content-type': 'application/JSON', 'auth_token': $scope.auth_token }
         }).then(function mySuccess(response) {
             $scope.Accessdata = response['data']['ResponseObject'];
-            debugger;
+          
         }, function myError(response) {
 
         });

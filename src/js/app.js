@@ -14,7 +14,8 @@ angular
             'ui.router',
             'oc.lazyLoad',
             'ncy-angular-breadcrumb',
-            'angular-loading-bar'
+            'angular-loading-bar',
+            'ui.bootstrap'
         ])
         .controller('maincontrol', ['$scope', '$rootScope', '$http', '$state', function ($scope, $rootScope, $http, $state) {
           debugger;
