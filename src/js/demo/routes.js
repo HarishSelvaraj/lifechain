@@ -46,6 +46,13 @@ angular
                                 label: 'Access Manager'
                             }
                         })
+                  .state('app.components.users', {
+                    url: '/user_list',
+                    templateUrl: 'views/components/regulatory/user.html',
+                    ncyBreadcrumb: {
+                      label: 'User List'
+                    }
+                  })
                         .state('app.components.projects', {
                             url: '/projects',
                             templateUrl: 'views/components/employer/projects.html',
